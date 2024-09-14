@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/styles.css">
+    <script src="/src/js/components/responsive-card.js" defer></script>
+    <script src="/src/js/pwa.js" defer></script>
+    <script src="/src/js/components/browser-support.js" defer></script>
+    <script src="/sw.js" defer></script>
+    <link rel="manifest" href="containerquery.webmanifest">
+    <link rel="shortcut icon" href="/public/images/icons/icon-72x72.png" type="image/png">
+    <title>Container query showcase</title>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Les @container queries en CSS</h1>
+            <button id="pwa-install" class="btn">Installer l'application</button>
+        </header>
+
+        <browser-support feature="container-type: inline-size"></browser-support>
+
+        <section>
+            <h2>Qu'est ce que les @container queries ?</h2>
+            <p>C'est une nouvelle fonctionnalité CSS qui permet aux développeurs de définir des différents styles CSS en
+                fonction de la taille des conteneurs.</p>
+        </section>
+
+        <section>
+            <h2>Différence avec les @media queries</h2>
+            <p>Les @media queries appliquent des styles en fonction de la taille du viewport, alors que les @container
+                queries on peut styliser des éléments en fonction de leur propre taille.</p>
+        </section>
+
+        <section>
+            <h2>Utilisation</h2>
+            <p>Pour utiliser les @container queries, il faut accomplir plusieurs étapes:</p>
+            <ol>
+                <li>Tout d'abord, il faut déclarer la propriété CSS container-type sur le conteneur.</li>
+                <li>Écrire la règle @container avec la condition souhaitée, par exemple width < 600px qui appliquera les
+                        styles que lorsque le conteneur est de largeur inférieure à 600 px.</li>
+                <li>Écrire les styles à appliquer aux enfants du conteneur ciblé par la condition.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Demonstration</h2>
+            <p>La démonstration suivante montre les @container queries en action. Utilisation d'écran large est
+                recommandée pour
+                pouvoir changer la taille des composants et voir les différents changements de style en fonction de la
+                taille du conteneur.</p>
+            <responsive-card></responsive-card>
+        </section>
+    </main>
+</body>
+
+</html>
